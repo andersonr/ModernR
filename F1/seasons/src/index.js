@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import SeasonDisplay from "./seasonDisplay";
+import Spinner from "./Spinner";
 
 class App extends React.Component {
   //Obrigatório por ser o construtor, igual ao construtor do JS
@@ -16,17 +18,24 @@ class App extends React.Component {
   //Inicialização moderna do state, não se utiliza mais o construtor
   state = { lat: null, errorMessage: "" };
 
-  //Obrigatório
-  render() {
+  //Conselho:
+  // Fazer um método para renderizar o conteúdo fora do render
+  renderContent() {
     if (this.state.errorMessage && !this.state.lat) {
       return <div>Error: {this.state.errorMessage}</div>;
     }
 
     if (!this.state.errorMessage && this.state.lat) {
-      return <div>Latitude: {this.state.lat}</div>;
+      return <SeasonDisplay lat={this.state.lat} />;
     }
 
-    return <div>Loading...</div>;
+    return <Spinner message="Por favor aceite a solicitação da localização!" />;
+  }
+
+  //Obrigatório
+  // Evitar ter vários return dentro do render
+  render() {
+    return <div className="border red">{this.renderContent()}</div>;
   }
 
   componentDidMount() {

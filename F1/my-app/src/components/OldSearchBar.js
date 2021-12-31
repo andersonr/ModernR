@@ -1,11 +1,12 @@
+//SearchBar feito do jeito antigo, com evento apenas a nível de componente, sem passar para filho e vice e versa
 import React from "react";
 
-class SearchBar extends React.Component {
+class OldSearchBar extends React.Component {
   state = { term: "" };
 
   onFormSubmit = (e) => {
     e.preventDefault();    
-    this.props.onSubmit(this.state.term);    
+    console.log(this.state.term);
   }
 
   render() {
@@ -31,4 +32,4 @@ class SearchBar extends React.Component {
   }
 }
 
-export default SearchBar;
+export default OldSearchBar;

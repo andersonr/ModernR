@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+# Pontos interessantes
+    >> Eventos nos elementos, quando usar arrow function, quando não usa;
+    >> Como lidar com o this nos eventos(usando arrow function sempre q der)
+    >> Componentes gerenciados e não gerenciados(sem state)
+    >> Conceito de Refs(Ref system) para acesso ao DOM(não existia no Native)
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

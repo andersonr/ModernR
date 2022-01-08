@@ -1,3 +1,5 @@
+>> Teste do PR na nova branch bugada
+
 # Pontos interessantes
     >> Eventos nos elementos, quando usar arrow function, quando não usa;
     >> Como lidar com o this nos eventos(usando arrow function sempre q der)
